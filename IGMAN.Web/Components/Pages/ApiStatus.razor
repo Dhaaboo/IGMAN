@@ -1,0 +1,63 @@
+﻿@page "/api-status"
+@inject IHttpClientFactory HttpClientFactory
+
+<PageTitle>IGMAN API Status</PageTitle>
+
+<h1>IGMAN API Status</h1>
+
+@if (loading)
+{
+    <p>Checking API...</p>
+}
+else if (online)
+{
+    <div>
+        🟢 <strong>IGMAN API: ONLINE</strong>
+    </div>
+
+    <p>@message</p>
+}
+else
+{
+    <div>
+        🔴 <strong>IGMAN API: OFFLINE</strong>
+    </div>
+
+    <p>@message</p>
+}
+
+@code {
+    private bool loading = true;
+    private bool online;
+    private string message = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var client = HttpClientFactory.CreateClient("IGMAN.Api");
+
+            var response = await client.GetAsync("/api/health");
+
+            if (response.IsSuccessStatusCode)
+            {
+                online = true;
+                message = await response.Content.ReadAsStringAsync();
+            }
+            else
+            {
+                online = false;
+                message = $"HTTP {(int)response.StatusCode}";
+            }
+        }
+        catch (Exception ex)
+        {
+            online = false;
+            message = ex.Message;
+        }
+        finally
+        {
+            loading = false;
+        }
+    }
+}
