@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<defs><radialGradient id="bg"><stop stop-color="#09283B"/><stop offset="1" stop-color="#020A12"/></radialGradient>
+<linearGradient id="ring" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#10D978"/><stop offset=".55" stop-color="#19F0A0"/><stop offset="1" stop-color="#31B9FF"/></linearGradient>
+<linearGradient id="face" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#DFFBFF"/><stop offset="1" stop-color="#5ACFFF"/></linearGradient></defs>
+<rect width="1024" height="1024" rx="180" fill="url(#bg)"/>
+<circle cx="390" cy="405" r="245" fill="none" stroke="url(#ring)" stroke-width="34"/>
+<path d="M470 190c-118 8-205 104-205 218 0 129 91 224 215 224 73 0 138-34 181-91-44 20-89 28-130 17-89-23-134-103-116-185 11-51 38-95 74-127z" fill="url(#face)"/>
+<path d="M337 351c48-43 96-57 143-52" fill="none" stroke="#12E98A" stroke-width="13" stroke-linecap="round"/>
+<circle cx="349" cy="326" r="10" fill="#12E98A"/><circle cx="405" cy="300" r="10" fill="#12E98A"/><circle cx="455" cy="314" r="10" fill="#12E98A"/>
+<path d="M354 330L405 300L455 314" fill="none" stroke="#12E98A" stroke-width="7"/>
+<text x="512" y="720" text-anchor="middle" font-family="DejaVu Sans" font-size="112" font-weight="700" fill="white">IGMAN</text>
+<text x="512" y="805" text-anchor="middle" font-family="DejaVu Sans" font-size="55" font-weight="700" fill="#19E68C">AI</text>
+<text x="512" y="874" text-anchor="middle" font-family="DejaVu Sans" font-size="34" fill="#B8D6E8">Your AI Assistant</text></svg>
