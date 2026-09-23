@@ -15,8 +15,4 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.20" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\IGMAN.Api\IGMAN.Api.csproj" />
-  </ItemGroup>
-
 </Project>
